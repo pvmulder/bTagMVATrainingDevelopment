@@ -1,0 +1,13 @@
+tested in CMSSW_4_4_4 with globaltag START_44_V5::All
+
+* checkout RecoBTau/JetTagMVALearning
+* change the BuildFile in RecoBTau/JetTagMVALearning/plugins with the BuildFile in this directory
+* cmsRun extractor.py on some RECO QCD sample to produce the trees 
+(AOD works too, but then the process.btagging should be switched on to remake the tagInfos)
+* ./doall.sh
+* cmsRun copyMVAToSQLite_cfg.py to make a .db file
+* cmsRun reco_validationNEW_CSVMVA_categories_cfg.py (make the btag DQM file)
+---> make sure global tag is consistent
+---> in case of AOD input you might need to remake the tagInfos
+---> read in the .db file that you made to validate the training
+* root -l CompareTaggers.C for the comparison of the different taggers in the DQM file
