@@ -196,23 +196,23 @@
                         <var source="proc10" name="var1"/>
                 </input>
                 <config>
-		  <bias_table>
-		    <bias>1.56894</bias>
-		    <bias>1.82567</bias>
-		    <bias>2.14767</bias>
-		    <bias>1.16971</bias>
-		    <bias>1.40125</bias>
-		    <bias>1.39936</bias>
-		    <bias>1.13347</bias>
-		    <bias>1.08258</bias>
-		    <bias>1.42689</bias>
-		    <bias>1.15829</bias>
-		    <bias>1.0514</bias>
-		    <bias>1.30223</bias>
-		    <bias>1.05844</bias>
-		    <bias>0.982402</bias>
-		    <bias>0.919933</bias>
-		  </bias_table>
+                        <bias_table>
+			        <bias>1.46068</bias>
+                                <bias>1.58441</bias>
+                                <bias>1.66927</bias>
+                                <bias>1.23318</bias>
+                                <bias>1.32574</bias>
+                                <bias>1.33346</bias>
+                                <bias>1.23817</bias>
+                                <bias>1.31075</bias>
+                                <bias>1.2533</bias>
+                                <bias>1.2291</bias>
+                                <bias>1.27674</bias>
+                                <bias>1.06432</bias>
+                                <bias>1.29146</bias>
+                                <bias>1.24857</bias>
+                                <bias>0.99258</bias>
+                        </bias_table>
 			<category count="15"/>
 			<sigbkg lower="0" upper="1" size="100" smooth="3"/>
                 </config>

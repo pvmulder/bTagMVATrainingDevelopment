@@ -215,22 +215,22 @@
 		<config>
 			<general strict="false"/>
                         <bias_table>
-			  <bias>48.3096</bias>
-			  <bias>32.1723</bias>
-			  <bias>30.9058</bias>
-			  <bias>32.4704</bias>
-			  <bias>21.5853</bias>
-			  <bias>16.5066</bias>
-			  <bias>26.9164</bias>
-			  <bias>17.3874</bias>
-			  <bias>13.1425</bias>
-			  <bias>21.4323</bias>
-			  <bias>13.0811</bias>
-			  <bias>9.45976</bias>
-			  <bias>14.2104</bias>
-			  <bias>8.40634</bias>
-			  <bias>7.33693</bias>
-			</bias_table>
+                                <bias>47.8384</bias>
+                                <bias>34.8781</bias>
+                                <bias>22.8623</bias>
+                                <bias>29.497</bias>
+                                <bias>23.5287</bias>
+                                <bias>17.1158</bias>
+                                <bias>21.5158</bias>
+                                <bias>18.3053</bias>
+                                <bias>14.6125</bias>
+                                <bias>14.5415</bias>
+                                <bias>13.3592</bias>
+                                <bias>11.4954</bias>
+                                <bias>8.08555</bias>
+                                <bias>8.13831</bias>
+                                <bias>8.03935</bias>
+                        </bias_table>
 			<category count="15"/>
 			<sigbkg smooth="3"/> <!-- FIXME -->
 			<!-- FILL ME -->

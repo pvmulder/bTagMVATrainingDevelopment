@@ -184,7 +184,7 @@
 			<var source="proc4" name="var4"/>
 		</input>
 		<config>
-                        <general log="true"/>
+                        <general/>
                         <category count="15"/>
                         <sigbkg smooth="3"/>
                         <sigbkg smooth="3"/>
@@ -346,7 +346,7 @@
 			<var source="proc8" name="var4"/>
 		</input>
 		<config>
-                        <general log="true"/>
+                        <general/>
                         <category count="15"/>
                         <sigbkg smooth="3"/>
                         <sigbkg smooth="3"/>
