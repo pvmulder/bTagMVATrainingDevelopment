@@ -182,8 +182,8 @@ void CompareTaggers()
   TCHE_FlavEffVsBEff_DUSG->GetYaxis()->SetTitleOffset(1.2);
   TCanvas * Plots1 = new TCanvas("Plots1","");
 	Plots1->SetLogy();
-	Plots1->SetGridx();
-	Plots1->SetGridy();
+	//Plots1->SetGridx();
+	//Plots1->SetGridy();
 	TCHE_FlavEffVsBEff_DUSG->SetTitle("");
 
   TCHE_FlavEffVsBEff_DUSG->Draw();
@@ -196,7 +196,7 @@ void CompareTaggers()
   SSVHP_FlavEffVsBEff_DUSG->SetMarkerColor(5);
   SSVHP_FlavEffVsBEff_DUSG->Draw("same");
   
-	leg = new TLegend(0.2,0.78,0.47,0.9);
+	leg = new TLegend(0.2,0.6,0.45,0.9);
   leg->SetFillColor(0);
   leg->AddEntry(TCHE_FlavEffVsBEff_DUSG,"TCHE","p");
   leg->AddEntry(TCHP_FlavEffVsBEff_DUSG,"TCHP","p");
@@ -223,8 +223,8 @@ void CompareTaggers()
   TCHE_FlavEffVsBEff_C->GetYaxis()->SetTitleOffset(1.2);
   TCanvas * Plots2 = new TCanvas("Plots2","");
 	Plots2->SetLogy();
-	Plots2->SetGridx();
-	Plots2->SetGridy();
+	//Plots2->SetGridx();
+	//Plots2->SetGridy();
 	TCHE_FlavEffVsBEff_C->SetTitle("");
 
   TCHE_FlavEffVsBEff_C->Draw();
@@ -237,7 +237,7 @@ void CompareTaggers()
   SSVHP_FlavEffVsBEff_C->SetMarkerColor(5);
   SSVHP_FlavEffVsBEff_C->Draw("same");
   
-	leg = new TLegend(0.15,0.78,0.47,0.9);
+	leg = new TLegend(0.6,0.2,0.85,0.5);
   leg->SetFillColor(0);
   leg->AddEntry(TCHE_FlavEffVsBEff_C,"TCHE","p");
   leg->AddEntry(TCHP_FlavEffVsBEff_C,"TCHP","p");

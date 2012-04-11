@@ -211,7 +211,7 @@ process.BTauMVAJetTagComputerRecord = cms.ESSource("PoolDBESSource",
 		#tag = cms.string('MVAJetTags_trackSip3dSig_2nd_B_vs_UDSG')
 		#tag = cms.string('MVAJetTags_trackSip3dSig_2nd_B_vs_C')
 	)),
-	connect = cms.string("sqlite_file:MVAJetTagsFakeConditionsNEW.db"),
+	connect = cms.string("sqlite_file:MVAJetTagsFakeConditions_ProcLinearFixed.db"),
 	#connect = cms.string('frontier://FrontierDev/CMS_COND_BTAU'),
 	BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService')
 )

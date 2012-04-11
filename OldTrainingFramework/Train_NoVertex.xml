@@ -324,6 +324,7 @@
 		    <var source="proc12" name="var1"/>
                 </input>
                 <config>
+									<coefficients offset="0.0" coeff1="0.75" coeff2="0.25"/> 
                 </config>
                 <output>
                         <var name="discriminator"/>
