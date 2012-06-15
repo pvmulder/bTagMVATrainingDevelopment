@@ -24,6 +24,7 @@
 		<var name="trackJetDist" multiple="true" optional="true"/>
 		<var name="trackFirstTrackDist" multiple="true" optional="true"/>
 		<var name="trackDecayLenVal" multiple="true" optional="true"/>
+		<var name="trackDecayLenSig" multiple="true" optional="true"/>
 		<var name="trackSip2dSigAboveCharm" multiple="true" optional="true"/>
 		<var name="trackSip3dSigAboveCharm" multiple="true" optional="true"/>
 		<var name="trackSumJetEtRatio" multiple="true" optional="true"/>

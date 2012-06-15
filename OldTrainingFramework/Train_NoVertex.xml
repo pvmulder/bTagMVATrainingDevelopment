@@ -30,6 +30,7 @@
 		<var name="trackJetDist" multiple="true" optional="true"/>
 		<var name="trackFirstTrackDist" multiple="true" optional="true"/>
 		<var name="trackDecayLenVal" multiple="true" optional="true"/>
+		<var name="trackDecayLenSig" multiple="true" optional="true"/>
 		<var name="vertexMass" multiple="false" optional="false"/>
 		<var name="vertexNTracks" multiple="false" optional="false"/>
 		<var name="vertexEnergyRatio" multiple="false" optional="false"/>

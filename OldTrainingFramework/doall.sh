@@ -1,5 +1,6 @@
 #!/bin/sh
 CAT="Reco Pseudo No"
+
 #for i in $CAT ; do
 #hadd CombinedSV${i}Vertex_DUSG.root CombinedSV${i}Vertex_G.root CombinedSV${i}Vertex_S.root CombinedSV${i}Vertex_U.root CombinedSV${i}Vertex_D.root
 #hadd CombinedSV${i}Vertex_B_DUSG.root CombinedSV${i}Vertex_DUSG.root CombinedSV${i}Vertex_B.root
