@@ -1,5 +1,7 @@
 #!/bin/sh
 CAT="Reco Pseudo No"
+
+#First copy rootfiles with input variables from CASTOR to tmp file and create soft links to them 
 for i in $CAT ; do
         rfcp /castor/cern.ch/user/d/descroix/MVA-Samples/MC_QCD_Tune4C_7TeV_pythia8_CombinedSV${i}Vertex_B_C.root /tmp/${USER}/CombinedSV${i}Vertex_B_C_histo.root
 	rfcp /castor/cern.ch/user/d/descroix/MVA-Samples/MC_QCD_Tune4C_7TeV_pythia8_CombinedSV${i}Vertex_B.root /tmp/${USER}/CombinedSV${i}Vertex_B_histo.root
@@ -10,7 +12,6 @@ for i in $CAT ; do
         ln -s /tmp/${USER}/CombinedSV${i}Vertex_B_histo.root CombinedSV${i}Vertex_B.root
         ln -s /tmp/${USER}/CombinedSV${i}Vertex_C_histo.root CombinedSV${i}Vertex_C.root
         ln -s /tmp/${USER}/CombinedSV${i}Vertex_B_DUSG_histo.root CombinedSV${i}Vertex_B_DUSG.root
-        ln -s /tmp/${USER}/CombinedSV${i}Vertex_B_DUSG_histo.root CombinedSV${i}Vertex_B_DUSG.root
         ln -s /tmp/${USER}/CombinedSV${i}Vertex_DUSG_histo.root CombinedSV${i}Vertex_DUSG.root
 
 done
@@ -19,7 +20,7 @@ done
 #hadd CombinedSV${i}Vertex_B_C.root CombinedSV${i}Vertex_C.root  CombinedSV${i}Vertex_B.root
 #done
 
-root -l -b histoJetEtaPt.C+ 
+root -l -b -q histoJetEtaPt.C+ 
 #g++ fitJetEtaPt.cpp `root-config --cflags --glibs` -o fitter
 mkdir weights
 for i in $CAT ; do
