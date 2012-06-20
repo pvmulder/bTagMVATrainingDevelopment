@@ -102,7 +102,10 @@
 			<var source="input" name="flightDistance2dVal"/>
 			<var source="input" name="flightDistance3dVal"/>
 			<var source="input" name="jetNSecondaryVertices"/>
-			<var source="input" name="vertexJetDeltaR"/>
+			<var source="input" name="vertexJetDeltaR"/>			
+			<var source="input" name="trackPtRatio"/>
+			<var source="input" name="trackJetDist"/>
+			<var source="input" name="trackSumJetEtRatio"/>			
 			<var source="category" name="category"/>
 			<var source="count" name="nTracks"/>
 		</input>
