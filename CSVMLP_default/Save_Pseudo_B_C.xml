@@ -93,6 +93,9 @@
 			<var source="input" name="trackSip2dSigAboveCharm"/>
 			<var source="input" name="trackSip3dSigAboveCharm"/>
 			<var source="input" name="vertexJetDeltaR"/>
+			<var source="input" name="trackPtRatio"/>
+			<var source="input" name="trackJetDist"/>
+			<var source="input" name="trackSumJetEtRatio"/>
 			<var source="category" name="category"/>
 			<var source="count" name="nTracks"/>
 		</input>
