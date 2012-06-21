@@ -24,7 +24,6 @@
 		<var name="trackJetDist" multiple="true" optional="true"/>
 		<var name="trackFirstTrackDist" multiple="true" optional="true"/>
 		<var name="trackDecayLenVal" multiple="true" optional="true"/>
-		<var name="trackDecayLenSig" multiple="true" optional="true"/>
 		<var name="vertexMass" multiple="true" optional="true"/>
 		<var name="vertexNTracks" multiple="true" optional="true"/>
 		<var name="vertexEnergyRatio" multiple="true" optional="true"/>
@@ -198,6 +197,8 @@
 	</processor>
 	<processor id="proc8" name="ProcMLP">
 		<input>
+			<var source="proc3" name="var1"/>
+			<var source="proc3" name="var2"/>
 			<var source="proc3" name="var11"/>
 			<var source="proc3" name="var12"/>
 			<var source="proc3" name="var13"/>
@@ -235,21 +236,21 @@
 		</input>
 		<config>
 			<bias_table>
-                                <bias>5.5283</bias>
-                                <bias>4.59117</bias>
-                                <bias>4.13535</bias>
-                                <bias>3.44186</bias>
-                                <bias>2.90755</bias>
-                                <bias>2.57304</bias>
-                                <bias>3.00456</bias>
-                                <bias>2.58288</bias>
-                                <bias>2.16625</bias>
-                                <bias>2.60842</bias>
-                                <bias>2.26565</bias>
-                                <bias>1.73815</bias>
-                                <bias>2.23279</bias>
-                                <bias>1.86923</bias>
-                                <bias>1.4326</bias>
+<bias>14.2671</bias>
+<bias>16.9919</bias>
+<bias>14.0894</bias>
+<bias>5.92361</bias>
+<bias>5.87956</bias>
+<bias>5.23817</bias>
+<bias>4.12563</bias>
+<bias>4.13038</bias>
+<bias>3.59834</bias>
+<bias>3.63392</bias>
+<bias>3.09341</bias>
+<bias>3.13097</bias>
+<bias>2.42523</bias>
+<bias>2.00305</bias>
+<bias>2.14843</bias>
 			</bias_table>
 			<category count="15"/>
 			<sigbkg smooth="3"/>
@@ -387,6 +388,8 @@
 	</processor>
 	<processor id="proc16" name="ProcMLP">
 		<input>
+			<var source="proc11" name="var1"/>
+			<var source="proc11" name="var2"/>
 			<var source="proc11" name="var11"/>
 			<var source="proc11" name="var12"/>
 			<var source="proc11" name="var13"/>
@@ -424,20 +427,21 @@
 		</input>
 		<config>
 			<bias_table>
-                                <bias>1.58441</bias>
-                                <bias>1.66927</bias>
-                                <bias>1.23318</bias>
-                                <bias>1.32574</bias>
-                                <bias>1.33346</bias>
-                                <bias>1.23817</bias>
-                                <bias>1.31075</bias>
-                                <bias>1.2533</bias>
-                                <bias>1.2291</bias>
-                                <bias>1.27674</bias>
-                                <bias>1.06432</bias>
-                                <bias>1.29146</bias>
-                                <bias>1.24857</bias>
-                                <bias>0.99258</bias>
+<bias>2.02117</bias>
+<bias>2.73574</bias>
+<bias>3.04124</bias>
+<bias>1.39427</bias>
+<bias>1.60937</bias>
+<bias>1.67324</bias>
+<bias>1.12543</bias>
+<bias>1.33962</bias>
+<bias>1.35624</bias>
+<bias>1.11452</bias>
+<bias>1.07457</bias>
+<bias>1.45962</bias>
+<bias>1.03466</bias>
+<bias>0.963433</bias>
+<bias>1.01161</bias>
 			</bias_table>
 			<category count="15"/>
 			<sigbkg smooth="3"/> 

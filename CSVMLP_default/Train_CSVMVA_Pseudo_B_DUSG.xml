@@ -25,7 +25,6 @@
 		<var name="trackJetDist" multiple="true" optional="true"/>
 		<var name="trackFirstTrackDist" multiple="true" optional="true"/>
 		<var name="trackDecayLenVal" multiple="true" optional="true"/>
-		<var name="trackDecayLenSig" multiple="true" optional="true"/>
 		<var name="vertexMass" multiple="true" optional="true"/>
 		<var name="vertexNTracks" multiple="true" optional="true"/>
 		<var name="vertexEnergyRatio" multiple="true" optional="true"/>
@@ -199,6 +198,8 @@
 	</processor>
 	<processor id="proc8" name="ProcMLP">
 		<input>
+			<var source="proc3" name="jetPt"/>
+			<var source="proc3" name="jetEta"/>
 			<var source="proc3" name="vertexMass"/>
 			<var source="proc3" name="vertexNTracks"/>
 			<var source="proc3" name="vertexEnergyRatio"/>
@@ -236,21 +237,21 @@
 		</input>
 		<config>
 			<bias_table>
-                                <bias>5.5283</bias>
-                                <bias>4.59117</bias>
-                                <bias>4.13535</bias>
-                                <bias>3.44186</bias>
-                                <bias>2.90755</bias>
-                                <bias>2.57304</bias>
-                                <bias>3.00456</bias>
-                                <bias>2.58288</bias>
-                                <bias>2.16625</bias>
-                                <bias>2.60842</bias>
-                                <bias>2.26565</bias>
-                                <bias>1.73815</bias>
-                                <bias>2.23279</bias>
-                                <bias>1.86923</bias>
-                                <bias>1.4326</bias>
+<bias>14.2671</bias>
+<bias>16.9919</bias>
+<bias>14.0894</bias>
+<bias>5.92361</bias>
+<bias>5.87956</bias>
+<bias>5.23817</bias>
+<bias>4.12563</bias>
+<bias>4.13038</bias>
+<bias>3.59834</bias>
+<bias>3.63392</bias>
+<bias>3.09341</bias>
+<bias>3.13097</bias>
+<bias>2.42523</bias>
+<bias>2.00305</bias>
+<bias>2.14843</bias>
 			</bias_table>
 			<category count="15"/>
 			<sigbkg smooth="3"/>

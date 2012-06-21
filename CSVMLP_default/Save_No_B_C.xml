@@ -30,7 +30,6 @@
 		<var name="trackJetDist" multiple="true" optional="true"/>
 		<var name="trackFirstTrackDist" multiple="true" optional="true"/>
 		<var name="trackDecayLenVal" multiple="true" optional="true"/>
-		<var name="trackDecayLenSig" multiple="true" optional="true"/>
 		<var name="trackSip2dSigAboveCharm" multiple="false" optional="false"/>
 		<var name="trackSip3dSigAboveCharm" multiple="false" optional="false"/>
 		<var name="trackSumJetEtRatio" multiple="false" optional="false"/>
@@ -85,9 +84,6 @@
 			<var source="input" name="trackDecayLenVal"/>
 			<var source="input" name="trackSip2dSigAboveCharm"/>
 			<var source="input" name="trackSip3dSigAboveCharm"/>
-			<var source="input" name="trackPtRatio"/>
-			<var source="input" name="trackJetDist"/>
-			<var source="input" name="trackSumJetEtRatio"/>
 			<var source="category" name="category"/>
 			<var source="count" name="nTracks"/>
 		</input>

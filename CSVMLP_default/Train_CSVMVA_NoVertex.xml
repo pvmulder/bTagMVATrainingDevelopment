@@ -24,7 +24,6 @@
 		<var name="trackJetDist" multiple="true" optional="true"/>
 		<var name="trackFirstTrackDist" multiple="true" optional="true"/>
 		<var name="trackDecayLenVal" multiple="true" optional="true"/>
-		<var name="trackDecayLenSig" multiple="true" optional="true"/>
 		<var name="trackSip2dSigAboveCharm" multiple="true" optional="true"/>
 		<var name="trackSip3dSigAboveCharm" multiple="true" optional="true"/>
 		<var name="trackSumJetEtRatio" multiple="true" optional="true"/>
@@ -162,6 +161,8 @@
 	</processor>
 	<processor id="proc7" name="ProcMLP">
 		<input>
+			<var source="proc3" name="jetPt"/>
+			<var source="proc3" name="jetEta"/>
 			<var source="proc3" name="trackSip2dSigAboveCharm"/>
 			<var source="proc3" name="nTracks"/>
 			<var source="proc6" name="trackSip3dSig_1"/>
@@ -194,21 +195,21 @@
 		</input>
 		<config>
 			<bias_table>
-                                <bias>0.373528</bias>
-                                <bias>0.461967</bias>
-                                <bias>0.624455</bias>
-                                <bias>0.235055</bias>
-                                <bias>0.316355</bias>
-                                <bias>0.473926</bias>
-                                <bias>0.203805</bias>
-                                <bias>0.271049</bias>
-                                <bias>0.415905</bias>
-                                <bias>0.202829</bias>
-                                <bias>0.25478</bias>
-                                <bias>0.388496</bias>
-                                <bias>0.255928</bias>
-                                <bias>0.277485</bias>
-                                <bias>0.365596</bias>
+<bias>0.610479</bias>
+<bias>0.695197</bias>
+<bias>0.783375</bias>
+<bias>0.355202</bias>
+<bias>0.435564</bias>
+<bias>0.564692</bias>
+<bias>0.268363</bias>
+<bias>0.344233</bias>
+<bias>0.48068</bias>
+<bias>0.232365</bias>
+<bias>0.304617</bias>
+<bias>0.453875</bias>
+<bias>0.284352</bias>
+<bias>0.349094</bias>
+<bias>0.496723</bias>
 			</bias_table>
 			<category count="15"/>
 			<sigbkg lower="0" upper="1" size="100" smooth="3"/>
@@ -313,6 +314,8 @@
 	</processor>
 	<processor id="proc14" name="ProcMLP">
 		<input>
+			<var source="proc10" name="jetPt"/>
+			<var source="proc10" name="jetEta"/>
 			<var source="proc10" name="trackSip2dSigAboveCharm"/>
 			<var source="proc10" name="nTracks"/>
 			<var source="proc13" name="trackSip3dSig_1"/>
@@ -345,21 +348,21 @@
 		</input>
 		<config>
 			<bias_table>
-                                <bias>0.373528</bias>
-                                <bias>0.461967</bias>
-                                <bias>0.624455</bias>
-                                <bias>0.235055</bias>
-                                <bias>0.316355</bias>
-                                <bias>0.473926</bias>
-                                <bias>0.203805</bias>
-                                <bias>0.271049</bias>
-                                <bias>0.415905</bias>
-                                <bias>0.202829</bias>
-                                <bias>0.25478</bias>
-                                <bias>0.388496</bias>
-                                <bias>0.255928</bias>
-                                <bias>0.277485</bias>
-                                <bias>0.365596</bias>
+<bias>0.68134</bias>
+<bias>0.74779</bias>
+<bias>0.822418</bias>
+<bias>0.445611</bias>
+<bias>0.51504</bias>
+<bias>0.627904</bias>
+<bias>0.35771</bias>
+<bias>0.429451</bias>
+<bias>0.55269</bias>
+<bias>0.324465</bias>
+<bias>0.40044</bias>
+<bias>0.53543</bias>
+<bias>0.41276</bias>
+<bias>0.472191</bias>
+<bias>0.602347</bias>
 			</bias_table>
 			<category count="15"/>
 			<sigbkg lower="0" upper="1" size="100" smooth="3"/>
