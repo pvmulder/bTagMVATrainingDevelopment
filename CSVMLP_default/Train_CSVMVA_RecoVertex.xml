@@ -24,7 +24,8 @@
 		<var name="trackJetDist" multiple="true" optional="true"/>
 		<var name="trackFirstTrackDist" multiple="true" optional="true"/>
 		<var name="trackDecayLenVal" multiple="true" optional="true"/>
-		<var name="vertexMass" multiple="true" optional="true"/>
+		<var name="trackDecayLenSig" multiple="true" optional="true"/>
+s		<var name="vertexMass" multiple="true" optional="true"/>
 		<var name="vertexNTracks" multiple="true" optional="true"/>
 		<var name="vertexEnergyRatio" multiple="true" optional="true"/>
 		<var name="trackSip2dSigAboveCharm" multiple="true" optional="true"/>
