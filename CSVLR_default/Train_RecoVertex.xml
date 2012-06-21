@@ -146,8 +146,8 @@
 			<var name="var6"/>
 			<var name="var7"/>
 			<var name="var8"/>
-			<var name="var9"/>
-			<var name="var10"/>
+			<var name="vartrackDeltaR"/>
+			<var name="vartrackDecayLenVal"/>
 			<var name="var11"/>
 			<var name="var12"/>
 			<var name="var13"/>
@@ -158,7 +158,7 @@
 			<var name="var18"/>
 			<var name="var19"/>
 			<var name="var20"/>
-			<var name="var21"/>
+			<var name="varvertexJetDeltaR"/>
                         <var name="vartrackPtRatio"/>
                         <var name="vartrackSumJetEtRatio"/>
                         <var name="vartrackJetDist"/>
@@ -317,8 +317,8 @@
 			<var name="var6"/>
 			<var name="var7"/>
 			<var name="var8"/>
-			<var name="var9"/>
-			<var name="var10"/>
+			<var name="vartrackDeltaR"/>
+			<var name="vartrackDecayLenVal"/>
 			<var name="var11"/>
 			<var name="var12"/>
 			<var name="var13"/>
@@ -329,7 +329,7 @@
 			<var name="var18"/>
 			<var name="var19"/>
 			<var name="var20"/>
-			<var name="var21"/>
+			<var name="varvertexJetDeltaR"/>
                         <var name="vartrackPtRatio"/>
                         <var name="vartrackSumJetEtRatio"/>
                         <var name="vartrackJetDist"/>
