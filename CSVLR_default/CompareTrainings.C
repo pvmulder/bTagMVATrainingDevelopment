@@ -25,7 +25,7 @@
 #include <stdio.h>
 #include <fstream.h>
 #include <vector.h>
-#include "/user/pvmulder/tdrstyle.C"
+#include "tdrstyle.C"
 
 TFile *file1, *file2;
 TLegend *leg;
