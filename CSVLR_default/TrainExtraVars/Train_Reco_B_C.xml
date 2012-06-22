@@ -114,10 +114,10 @@
                         <pdf smooth="1" lower="-3" upper="3"/>
                         <pdf smooth="1" lower="0" upper="250"/>
                         <pdf smooth="2" lower="1.2" upper="8.5"/>
-                        <pdf smooth="2" lower="0" upper="0.5"/>
-                        <pdf smooth="1" lower="0.0" upper="0.3"/>
-                        <pdf smooth="1" lower="-0.07" upper="0.0"/>
-                        <pdf smooth="1" lower="0" upper="40"/>
+                        <pdf smooth="2" lower="0" upper="0.5"/>     <!-- trackDeltaR -->
+                        <pdf smooth="1" lower="0.0" upper="0.3"/>   <!-- trackPtRatio -->
+                        <pdf smooth="1" lower="-0.07" upper="0.0"/> <!-- trackJetDist -->
+                        <pdf smooth="1" lower="0" upper="40"/>      <!-- trackDecayLenVal -->
                         <pdf smooth="2" lower="0.2" upper="10"/>
                         <pdf smooth="2" lower="1.5" upper="13.5"/>
                         <pdf lower="0" upper="1"/>
@@ -127,9 +127,9 @@
                         <pdf smooth="1" lower="0" upper="200"/>
                         <pdf smooth="1" lower="0.01" upper="2.5"/>
                         <pdf smooth="1" lower="0" upper="12"/>
-                        <pdf smooth="1" lower="0.0" upper="5.0"/>
+                        <pdf smooth="1" lower="0.0" upper="5.0"/>   <!-- trackSumJetEtRatio -->
                         <pdf smooth="2" lower="1" upper="7"/>
-                        <pdf lower="0" upper="0.5"/>
+                        <pdf lower="0" upper="0.5"/>                <!-- vertexJetDeltaR -->
 		</config>
 		<output>
 			<var name="var1"/>
@@ -197,21 +197,22 @@
                         <general/>
                         <category count="15"/>
                         <sigbkg smooth="3"/>
-                        <sigbkg smooth="3"/>
-                        <sigbkg smooth="3"/>
-                        <sigbkg smooth="3"/>
-                        <sigbkg smooth="3"/>
+                        <sigbkg smooth="3"/> <!-- trackDeltaR -->
+                        <sigbkg smooth="3"/> <!-- trackPtRatio -->
+                        <sigbkg smooth="3"/> <!-- trackJetDist -->
+                        <sigbkg smooth="3"/> <!-- trackDecayLenVal -->
                         <sigbkg smooth="3"/>
                         <sigbkg/>
                         <sigbkg smooth="3"/>
                         <sigbkg smooth="3"/>
                         <sigbkg smooth="3"/>
+                        <sigbkg smooth="3"/> <!-- trackSumJetEtRatio -->
+                        <sigbkg smooth="3"/> <!-- vertexJetDeltaR -->
                         <sigbkg smooth="3"/>
                         <sigbkg smooth="3"/>
                         <sigbkg smooth="3"/>
                         <sigbkg smooth="3"/>
-                        <sigbkg smooth="3"/>
-                        <sigbkg smooth="3"/>
+			<!-- FILL ME -->
 		</config>
 		<output>
 			<var name="var1"/>
