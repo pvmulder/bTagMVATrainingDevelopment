@@ -107,9 +107,6 @@
 			<var source="input" name="flightDistance3dVal"/>
 			<var source="input" name="jetNSecondaryVertices"/>
 			<var source="input" name="vertexJetDeltaR"/>
-                        <var source="input" name="trackPtRatio"/>
-                        <var source="input" name="trackSumJetEtRatio"/>
-                        <var source="input" name="trackJetDist"/>
 		</input>
 		<config>
                         <pdf/>
@@ -133,9 +130,6 @@
                         <pdf smooth="1" lower="0" upper="12"/>
                         <pdf smooth="2" lower="1" upper="7"/>
                         <pdf lower="0" upper="0.5"/>
-                        <pdf smooth="1" lower="0.0" upper="0.3"/>
-                        <pdf smooth="1" lower="0.0" upper="5.0"/>
-                        <pdf smooth="1" lower="-0.07" upper="0.0"/>
 		</config>
 		<output>
 			<var name="var1"/>
@@ -146,8 +140,8 @@
 			<var name="var6"/>
 			<var name="var7"/>
 			<var name="var8"/>
-			<var name="vartrackDeltaR"/>
-			<var name="vartrackDecayLenVal"/>
+			<var name="var9"/>
+			<var name="var10"/>
 			<var name="var11"/>
 			<var name="var12"/>
 			<var name="var13"/>
@@ -158,10 +152,7 @@
 			<var name="var18"/>
 			<var name="var19"/>
 			<var name="var20"/>
-			<var name="varvertexJetDeltaR"/>
-                        <var name="vartrackPtRatio"/>
-                        <var name="vartrackSumJetEtRatio"/>
-                        <var name="vartrackJetDist"/>
+			<var name="var21"/>
 		</output>
 	</processor>
 	<processor id="proc4" name="ProcSplitter">
@@ -278,9 +269,6 @@
 			<var source="input" name="flightDistance3dVal"/>
 			<var source="input" name="jetNSecondaryVertices"/>
 			<var source="input" name="vertexJetDeltaR"/>
-                        <var source="input" name="trackPtRatio"/>
-                        <var source="input" name="trackSumJetEtRatio"/>
-                        <var source="input" name="trackJetDist"/>
 		</input>
 		<config>
                         <pdf/>
@@ -304,9 +292,6 @@
                         <pdf smooth="1" lower="0" upper="12"/>
                         <pdf smooth="2" lower="1" upper="7"/>
                         <pdf lower="0" upper="0.5"/>
-                        <pdf smooth="1" lower="0.0" upper="0.3"/>
-                        <pdf smooth="1" lower="0.0" upper="5.0"/>
-                        <pdf smooth="1" lower="-0.07" upper="0.0"/>
 		</config>
 		<output>
 			<var name="var1"/>
@@ -317,8 +302,8 @@
 			<var name="var6"/>
 			<var name="var7"/>
 			<var name="var8"/>
-			<var name="vartrackDeltaR"/>
-			<var name="vartrackDecayLenVal"/>
+			<var name="var9"/>
+			<var name="var10"/>
 			<var name="var11"/>
 			<var name="var12"/>
 			<var name="var13"/>
@@ -329,10 +314,7 @@
 			<var name="var18"/>
 			<var name="var19"/>
 			<var name="var20"/>
-			<var name="varvertexJetDeltaR"/>
-                        <var name="vartrackPtRatio"/>
-                        <var name="vartrackSumJetEtRatio"/>
-                        <var name="vartrackJetDist"/>
+			<var name="var21"/>
 		</output>
 	</processor>
 	<processor id="proc8" name="ProcSplitter">
