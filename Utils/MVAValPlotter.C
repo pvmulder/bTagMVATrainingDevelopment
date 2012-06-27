@@ -50,7 +50,7 @@ std::vector<TH1F*> PlotLoader(string cat, string var, string norm)
 	
 	std::vector<TH1F*> Histos;
 	
-	string rootname="/portal/ekpcms4/home/descroix/MVA_Validation/Histos.root";
+	string rootname="Histos.root";
 	
 	//B-jets
 	sprintf(histoname,"%s_%s_B",var.c_str(),cat.c_str());
@@ -448,11 +448,11 @@ void Drawer(string cat, string var, string norm, string log)
 	
 //Saving Histos		
 	
-	string outFileName="/home/descroix/MVA_Validation/plots/"+var+"_"+cat+"Vertex_"+log+"_"+norm+"Norm.pdf";
+	string outFileName=var+"_"+cat+"Vertex_"+log+"_"+norm+"Norm.pdf";
 	c1->Print(outFileName.c_str());
-	outFileName="/home/descroix/MVA_Validation/plots/"+var+"_"+cat+"Vertex_"+log+"_"+norm+"Norm.png";
+	outFileName=var+"_"+cat+"Vertex_"+log+"_"+norm+"Norm.png";
 	c1->Print(outFileName.c_str());
-	outFileName="/home/descroix/MVA_Validation/plots/"+var+"_"+cat+"Vertex_"+log+"_"+norm+"Norm.root";
+	outFileName=var+"_"+cat+"Vertex_"+log+"_"+norm+"Norm.root";
 	c1->Print(outFileName.c_str());
 }
 
@@ -464,7 +464,7 @@ int main(int argc, char** argv)
 	
 	string vertCat,scale,rep;
 	
-	vertCat = "No";
+	vertCat = "Reco";
 	scale = "unit";
 	rep = "lin";
 

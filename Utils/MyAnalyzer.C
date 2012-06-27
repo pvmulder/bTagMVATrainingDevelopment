@@ -121,7 +121,7 @@ double MyAnalyzer::GetSampleWeight()
 		NoE=218323;
 		CS=0.000387;
 	}
-	if(CS==0){cout<<"WARNING! Weight not found, false weight is obviously applied, leading to dramatic consequences."<<endl;}
+	if(CS==0){cout<<"WARNING! Weight not found, null weight is applied, leading to dramatic consequences."<<endl;}
 	
 	scale=lumi*CS/NoE;
 	return scale;
@@ -138,7 +138,9 @@ void MyAnalyzer::Begin(TTree * /*tree*/)
 	flavor = getenv("FLAV");
 	nick = getenv("DATASETNICK");
 	
-	cout<<"Initializing the "<<category<<" category in "<<flavor<<" flavor."<<endl;
+	lightJetPrescale=5;
+	
+	cout<<"Initializing the "<<category<<" vertex category with "<<flavor<<" jets."<<endl;
 	
 	weight = GetSampleWeight();
 	
@@ -232,6 +234,10 @@ Bool_t MyAnalyzer::Process(Long64_t entry)
 	//
 	// The return value is currently not used.
 	MyAnalyzer::GetEntry( entry );
+	
+	
+	
+	if((flavor=="DUSG")&&(entry%lightJetPrescale!=0)){return kTRUE;}
 
 	for(unsigned int i=0;i<etamin.size();i++)
 	{
@@ -256,7 +262,6 @@ Bool_t MyAnalyzer::Process(Long64_t entry)
 				Fill1DHisto("trackPtRatio_"+category+"_"+flavor+etabin.at(i),trackPtRatio->at(j));
 				Fill1DHisto("trackPParRatio_"+category+"_"+flavor+etabin.at(i),trackPParRatio->at(j));
 				Fill1DHisto("trackJetDist_"+category+"_"+flavor+etabin.at(i),trackJetDist->at(j));
-				//Fill1DHisto("trackFirstTrackDist_"+category+"_"+flavor+etabin.at(i),trackFirstTrackDist->at(j));
 			}
 			
 			double IPMAX=-999999999.9;

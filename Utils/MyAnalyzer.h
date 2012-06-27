@@ -34,6 +34,8 @@ public :
    
    double weight;
    
+   Long64_t lightJetPrescale;
+   
    template<typename T>
    T getEnv(const std::string & varname);
    

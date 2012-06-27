@@ -1,0 +1,15 @@
+27th of June 2012
+
+How to use shape plotters found in UserCode/PetraVanMulders/BTagging/Utils to plot the shape of MVA input variables
+
+	1. Execute the Collector.sh script
+	2. Execute the CompScript.sh script
+	3. This last command also opens the canvas you've demanded. Your terminal is not usable until you close with ctrl+c
+	
+Collector.sh collects variables from the jets found in the different trees (different pt-bins), produced with the extractor.py from the CSVLR_default/ directory, and stores the variables in Histos.root
+
+CompScript compiles the macro to plot the variables collected in Histos.root in histograms which are stored in .pdf, .png and .root in plots directory
+
+More details on the content of these two .sh scripts in the corresponding README files
+
+Alexis
