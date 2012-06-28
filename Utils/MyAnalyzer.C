@@ -56,6 +56,11 @@ double MyAnalyzer::GetSampleWeight()
 	double CS=0;
 	double lumi=1.0;
 	
+	//Numbers from the PREP page, looking for the following dataset template:
+	//
+	////  QCD_Pt-50to80_Tune4C_7TeV_pythia8
+	//
+	
 	if(nick=="15to30")
 	{
 		NoE=1070600;
@@ -242,9 +247,13 @@ Bool_t MyAnalyzer::Process(Long64_t entry)
 	for(unsigned int i=0;i<etamin.size();i++)
 	{
 		if((fabs(jetEta)<etamax.at(i))&&(fabs(jetEta)>=etamin.at(i))){
+
+//jet variables
 			Fill1DHisto("jetPt_"+category+"_"+flavor+etabin.at(i),jetPt);
 			Fill1DHisto("jetEta_"+category+"_"+flavor+etabin.at(i),jetEta);
-
+			Fill1DHisto("trackMultiplicity_"+category+"_"+flavor+etabin.at(i),trackMomentum->size());
+			
+//Basic track variables
 			for(unsigned j=0;j<trackMomentum->size();j++)
 			{
 				Fill1DHisto("trackSip2dSig_"+category+"_"+flavor+etabin.at(i),trackSip2dSig->at(j));
@@ -264,6 +273,7 @@ Bool_t MyAnalyzer::Process(Long64_t entry)
 				Fill1DHisto("trackJetDist_"+category+"_"+flavor+etabin.at(i),trackJetDist->at(j));
 			}
 			
+//Separating the tracks depending on their IP3DSig value, first second third and rests are sotred seperatly
 			double IPMAX=-999999999.9;
 			unsigned MAXID=0;
 			unsigned MAX2ID=0;
@@ -294,10 +304,11 @@ Bool_t MyAnalyzer::Process(Long64_t entry)
 					MAX3ID=j;
 				}
 			}
+	//filling the 3 first tracks
 			if(trackMomentum->size()>0){Fill1DHisto("trackSip3dSig_1stTrk_"+category+"_"+flavor+etabin.at(i),trackSip3dSig->at(MAXID));}
 			if(trackMomentum->size()>1){Fill1DHisto("trackSip3dSig_2ndTrk_"+category+"_"+flavor+etabin.at(i),trackSip3dSig->at(MAX2ID));}
 			if(trackMomentum->size()>2){Fill1DHisto("trackSip3dSig_3rdTrk_"+category+"_"+flavor+etabin.at(i),trackSip3dSig->at(MAX3ID));}
-			
+	//filling the rest tracks
 			for(unsigned j=0;j<trackMomentum->size();j++)
 			{
 				if((j!=MAXID)&&(j!=MAX2ID)&&(j!=MAX3ID)&&(trackMomentum->size()>3))
@@ -305,12 +316,14 @@ Bool_t MyAnalyzer::Process(Long64_t entry)
 					Fill1DHisto("trackSip3dSig_restTrk_"+category+"_"+flavor+etabin.at(i),IPMAX);
 				}
 			}
-			
-			Fill1DHisto("trackMultiplicity_"+category+"_"+flavor+etabin.at(i),trackMomentum->size());
+
+//trackEtaRel has a different number of entries because it is using a track weight
 			for(unsigned j=0;j<trackEtaRel->size();j++)
 			{
 				Fill1DHisto("trackEtaRel_"+category+"_"+flavor+etabin.at(i),trackEtaRel->at(j));
 			}
+			
+//more sophisticated variables. Depending on the vertex category, not every variables are available
 			Fill1DHisto("trackSip2dSigAboveCharm_"+category+"_"+flavor+etabin.at(i),trackSip2dSigAboveCharm);
 			Fill1DHisto("trackSip3dSigAboveCharm_"+category+"_"+flavor+etabin.at(i),trackSip3dSigAboveCharm);
 			Fill1DHisto("trackSumJetEtRatio_"+category+"_"+flavor+etabin.at(i),trackSumJetEtRatio);

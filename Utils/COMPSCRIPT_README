@@ -1,0 +1,14 @@
+28th of June 2012
+
+====================================
+Description of the CompScript method
+====================================
+
+1. A compilation of the plot macro is done. Two macros are written doing almost the same:
+	a) MVAVarPlotter produces global distributions
+	b) MVAVarPlotter_etabin enables to plot in eta bins (0-1.4 and 1.4-2.4 are defined). Two comparison variants are possible, decided by argument given in the main function at the end of the macro:
+		i) compare jet-flavors in a given eta-bin
+		ii) compare eta-bins for a given jet-flavor
+	Numerous comments are present in the macro to explain the various steps
+2. The resulting binary is executed
+3. This execution leads to locking of the teminal until you close with ctrl+c. This closes all canvas opened by the execution of the binary

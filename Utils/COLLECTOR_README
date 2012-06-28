@@ -1,0 +1,35 @@
+28th of June 2012
+
+===================================
+Description of the Collector method
+===================================
+
+1. Definition of environement variables to loop on the different types:
+	VertexType, JetFlavor, PtBin
+
+2. Loop on the types with exportation of the current value of the type for use in the macro
+
+3. Execution of the AnalyziLoader.C in root. This function only load in root the file to read and starts the main program: MyAnalyzer
+
+	a) MyAnalyzer had been written with a root method for reading a tree: TTree::MakeSelector() -> MyAnalyzer.C and MyAnalyzer.h
+
+	b) MyAnalyzer.C contains the code producing the histograms and filling them, out values from the tree loaded in AnalyzeLoader. Basic 1D histograms of the variables currently implemented in extractor are written.
+
+	c) The declaration of new variables being used in the different methods of the .C have to be written in .h. In the same way a new branch of the tree has to be added in the .h at several parts of the code (just follow the way it is done for branch already declared)
+
+	d) Then defines new variables in Begin() of .C You can use Init1DHisto to initialize 1D plots
+
+	e) The Process method is called by each entry of the ntuple (corresponding to each jet found)
+
+		i) entry is the number of the entry(=jet) a line at the beginning enables to apply a kind of prescale to light jet samples in order to accelerate the whole plotting. The prescale factor is defined in Begin
+
+		ii) a first for-loop loops over the different jet-eta bins. The ranges and the corresponding eta-bin name are defined in Begin
+
+		iii) inside the loop more comments are written
+
+
+	f) Terminate terminates the work by just writing what has been collected.
+
+4. When all loopsare finished, every histogram root-files are merges with hadd and only the resulting Histos.root is kept, the rest is removed.
+
+5. Next step is CompScript in COMPSCRIPT_README
