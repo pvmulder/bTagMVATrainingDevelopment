@@ -60,6 +60,12 @@ void AdaptOneFile(TString file = "", std::vector<TString> VetoVars) {
   ifstream ifile(dir + file);
   ofstream of(outputdir + file);
 
+  //Initialize a vector of first appearences in the text of vetoed variable
+  std::vector<int> IsFirstAppearence;
+  for (unsigned int  i = 0; i < VetoVars.size(); i++)
+    IsFirstAppearence.push_back(1);
+  
+
   TString line;
 
   while (ifile) {
@@ -72,8 +78,9 @@ void AdaptOneFile(TString file = "", std::vector<TString> VetoVars) {
       
       //if line contains one of the vetoed variables, then the line is not written
       if (line.Contains(VetoVars[i])) {
-        printline = false;
-	break;
+        if (IsFirstAppearence[i] != 0) IsFirstAppearence[i] = 0;
+        else printline = false;
+	
       }
     
     }//end loop to veto variables vector
