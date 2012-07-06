@@ -219,21 +219,21 @@
                 </input>
                 <config>
                         <bias_table>
-			        <bias>1.46068</bias>
-                                <bias>1.58441</bias>
-                                <bias>1.66927</bias>
-                                <bias>1.23318</bias>
-                                <bias>1.32574</bias>
-                                <bias>1.33346</bias>
-                                <bias>1.23817</bias>
-                                <bias>1.31075</bias>
-                                <bias>1.2533</bias>
-                                <bias>1.2291</bias>
-                                <bias>1.27674</bias>
-                                <bias>1.06432</bias>
-                                <bias>1.29146</bias>
-                                <bias>1.24857</bias>
-                                <bias>0.99258</bias>
+                                <bias>2.02117</bias>
+				<bias>2.73574</bias>
+				<bias>3.04124</bias>
+				<bias>1.39427</bias>
+				<bias>1.60937</bias>
+				<bias>1.67324</bias>
+				<bias>1.12543</bias>
+				<bias>1.33962</bias>
+				<bias>1.35624</bias>
+				<bias>1.11452</bias>
+				<bias>1.07457</bias>
+				<bias>1.45962</bias>
+				<bias>1.03466</bias>
+				<bias>0.963433</bias>
+                                <bias>1.01161</bias>
                         </bias_table>
 			<category count="15"/>
 			<sigbkg lower="0" upper="1" size="100" smooth="3"/>

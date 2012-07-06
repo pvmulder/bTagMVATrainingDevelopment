@@ -237,21 +237,21 @@
 		<config>
 			<general strict="false"/>
                         <bias_table>
-                                <bias>47.8384</bias>
-                                <bias>34.8781</bias>
-                                <bias>22.8623</bias>
-                                <bias>29.497</bias>
-                                <bias>23.5287</bias>
-                                <bias>17.1158</bias>
-                                <bias>21.5158</bias>
-                                <bias>18.3053</bias>
-                                <bias>14.6125</bias>
-                                <bias>14.5415</bias>
-                                <bias>13.3592</bias>
-                                <bias>11.4954</bias>
-                                <bias>8.08555</bias>
-                                <bias>8.13831</bias>
-                                <bias>8.03935</bias>
+                                <bias>73.4032</bias>
+				<bias>53.6842</bias>
+				<bias>28.9836</bias>
+				<bias>40.4916</bias>
+				<bias>27.9614</bias>
+				<bias>19.4163</bias>
+				<bias>31.3001</bias>
+				<bias>21.0905</bias>
+				<bias>14.6575</bias>
+				<bias>25.5065</bias>
+				<bias>16.8402</bias>
+				<bias>11.7351</bias>
+				<bias>13.8672</bias>
+				<bias>8.56481</bias>
+				<bias>6.90638</bias>
                         </bias_table>
 			<category count="15"/>
 			<sigbkg smooth="3"/> <!-- FIXME -->
