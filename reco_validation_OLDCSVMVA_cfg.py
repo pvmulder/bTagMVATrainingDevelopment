@@ -45,6 +45,7 @@ process.myak5JetTracksAssociatorAtVertex = cms.EDProducer("JetTracksAssociatorAt
 
 #new input for impactParameterTagInfos, softleptons
 from RecoBTag.Configuration.RecoBTag_cff import *
+process.btagging = cms.Sequence(impactParameterTagInfos * secondaryVertexTagInfos * combinedSecondaryVertexBJetTags)
 process.impactParameterTagInfos.jetTracks = cms.InputTag("myak5JetTracksAssociatorAtVertex")
 softMuonTagInfos.jets = jetID
 softElectronTagInfos.jets = jetID
@@ -105,6 +106,11 @@ process.AK5byRef.jets                         = newjetID
 #		)
 #)
 
+from DQMOffline.RecoB.bTagCommon_cff import*
+process.load("DQMOffline.RecoB.bTagCommon_cff")
+process.bTagCommonBlock.ptRanges = cms.vdouble(0.0,40.0,60.0,90.0, 150.0,3000.0)
+process.bTagCommonBlock.etaRanges = cms.vdouble(0.0, 1.2, 2.1, 2.4)
+
 from Validation.RecoB.bTagAnalysis_cfi import *
 process.load("Validation.RecoB.bTagAnalysis_cfi")
 process.bTagValidation.jetMCSrc = 'AK5byValAlgo'
@@ -119,34 +125,6 @@ process.bTagValidation.tagConfig = cms.VPSet(
             folder = cms.string("IPTag")
         ), 
         cms.PSet(
-    				parameters = cms.PSet(
-        			discriminatorStart = cms.double(-35),
-        			discriminatorEnd = cms.double(35),
-        			nBinEffPur = cms.int32(200),
-        			# the constant b-efficiency for the differential plots versus pt and eta
-        			effBConst = cms.double(0.5),
-        			endEffPur = cms.double(1.005),
-        			startEffPur = cms.double(0.005)
-    				),
-            #bTagTrackCountingAnalysisBlock,
-            label = cms.InputTag("trackCountingHighEffBJetTags"),
-            folder = cms.string("TCHE")
-        ), 
-        cms.PSet(
-    				parameters = cms.PSet(
-        			discriminatorStart = cms.double(-35),
-        			discriminatorEnd = cms.double(35),
-        			nBinEffPur = cms.int32(200),
-        			# the constant b-efficiency for the differential plots versus pt and eta
-        			effBConst = cms.double(0.5),
-        			endEffPur = cms.double(1.005),
-        			startEffPur = cms.double(0.005)
-    				),
-            #bTagTrackCountingAnalysisBlock,
-            label = cms.InputTag("trackCountingHighPurBJetTags"),
-            folder = cms.string("TCHP")
-        ), 
-        cms.PSet(
 				    parameters = cms.PSet(
         			discriminatorStart = cms.double(-0.05),
         			discriminatorEnd = cms.double(1.05),
@@ -158,39 +136,67 @@ process.bTagValidation.tagConfig = cms.VPSet(
     				),
             label = cms.InputTag("combinedSecondaryVertexBJetTags"),
             folder = cms.string("CSV")
-        ), 
-        cms.PSet(
-                parameters = cms.PSet(
-                discriminatorStart = cms.double(0.0),
-                nBinEffPur = cms.int32(200),
-                # the constant b-efficiency for the differential plots versus pt and eta
-                effBConst = cms.double(0.5),
-                endEffPur = cms.double(1.005),
-                discriminatorEnd = cms.double(8.0),
-                startEffPur = cms.double(0.005)
-                ),              
-            label = cms.InputTag("simpleSecondaryVertexHighEffBJetTags"),
-            folder = cms.string("SSVHE")
-        ),
-        cms.PSet(
-                parameters = cms.PSet(
-                discriminatorStart = cms.double(0.0),
-                nBinEffPur = cms.int32(200),
-                # the constant b-efficiency for the differential plots versus pt and eta
-                effBConst = cms.double(0.5),
-                endEffPur = cms.double(1.005),
-                discriminatorEnd = cms.double(8.0),
-                startEffPur = cms.double(0.005)
-                ),              
-            label = cms.InputTag("simpleSecondaryVertexHighPurBJetTags"),
-            folder = cms.string("SSVHP")
-        )
+        ) 
+#        ,cms.PSet(
+#    				parameters = cms.PSet(
+#        			discriminatorStart = cms.double(-35),
+#        			discriminatorEnd = cms.double(35),
+#        			nBinEffPur = cms.int32(200),
+#        			# the constant b-efficiency for the differential plots versus pt and eta
+#        			effBConst = cms.double(0.5),
+#        			endEffPur = cms.double(1.005),
+#        			startEffPur = cms.double(0.005)
+#    				),
+#            #bTagTrackCountingAnalysisBlock,
+#            label = cms.InputTag("trackCountingHighEffBJetTags"),
+#            folder = cms.string("TCHE")
+#        ), 
+#        cms.PSet(
+#    				parameters = cms.PSet(
+#        			discriminatorStart = cms.double(-35),
+#        			discriminatorEnd = cms.double(35),
+#        			nBinEffPur = cms.int32(200),
+#        			# the constant b-efficiency for the differential plots versus pt and eta
+#        			effBConst = cms.double(0.5),
+#        			endEffPur = cms.double(1.005),
+#        			startEffPur = cms.double(0.005)
+#    				),
+#            #bTagTrackCountingAnalysisBlock,
+#            label = cms.InputTag("trackCountingHighPurBJetTags"),
+#            folder = cms.string("TCHP")
+#        ),
+#				cms.PSet(
+#                parameters = cms.PSet(
+#                discriminatorStart = cms.double(0.0),
+#                nBinEffPur = cms.int32(200),
+#                # the constant b-efficiency for the differential plots versus pt and eta
+#                effBConst = cms.double(0.5),
+#                endEffPur = cms.double(1.005),
+#                discriminatorEnd = cms.double(8.0),
+#                startEffPur = cms.double(0.005)
+#                ),              
+#            label = cms.InputTag("simpleSecondaryVertexHighEffBJetTags"),
+#            folder = cms.string("SSVHE")
+#        ),
+#        cms.PSet(
+#                parameters = cms.PSet(
+#                discriminatorStart = cms.double(0.0),
+#                nBinEffPur = cms.int32(200),
+#                # the constant b-efficiency for the differential plots versus pt and eta
+#                effBConst = cms.double(0.5),
+#                endEffPur = cms.double(1.005),
+#                discriminatorEnd = cms.double(8.0),
+#                startEffPur = cms.double(0.005)
+#                ),              
+#            label = cms.InputTag("simpleSecondaryVertexHighPurBJetTags"),
+#            folder = cms.string("SSVHP")
+#        )
 )
 
 
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(500000)
+    input = cms.untracked.int32(10000)
 )
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring()
@@ -200,7 +206,7 @@ process.plots = cms.Path(process.goodOfflinePrimaryVertices * process.JECAlgo * 
 
 process.dqmEnv.subSystemFolder = 'BTAG'
 process.dqmSaver.producer = 'DQM'
-process.dqmSaver.workflow = '/POG/BTAG/OLD500k'
+process.dqmSaver.workflow = '/POG/BTAG/OLD'
 process.dqmSaver.convention = 'Offline'
 process.dqmSaver.saveByRun = cms.untracked.int32(-1)
 process.dqmSaver.saveAtJobEnd =cms.untracked.bool(True) 
