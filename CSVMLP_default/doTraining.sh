@@ -44,6 +44,7 @@ do
  		mkdir tmp${CombinationsArray[l]}
  		cd tmp${CombinationsArray[l]}
 		nohup mvaTreeTrainer ../CSV_CMSSWMLP_${CombinationsArray[l]}.xml tmp.mva ../train_${CombinationsArray[l]}_save.root &
+#		nohup mvaTreeTrainer ../CSV_TMVA_${CombinationsArray[l]}_defaultBDT.xml tmp.mva ../train_${CombinationsArray[l]}_save.root &
 		cd ..
 		let jobsrunning=$jobsrunning+1
 		let l=$l+1
@@ -67,7 +68,8 @@ do
 		cp ../tmp${VertexCategory[l]}_B_C/*.txt .
 		cp ../tmp${VertexCategory[l]}_B_DUSG/*.xml .
 		cp ../tmp${VertexCategory[l]}_B_DUSG/*.txt .
- 		nohup mvaTreeTrainer -l ../CSV_CMSSWMLP_${VertexCategory[l]}.xml ${prefix}MVA_${VertexCategory[l]}.mva ../train_${VertexCategory[l]}_B_DUSG_save.root ../train_${VertexCategory[l]}_B_C_save.root &
+# 		nohup mvaTreeTrainer -l ../CSV_CMSSWMLP_${VertexCategory[l]}.xml ${prefix}MVA_${VertexCategory[l]}.mva ../train_${VertexCategory[l]}_B_DUSG_save.root ../train_${VertexCategory[l]}_B_C_save.root &
+ 		nohup mvaTreeTrainer -l ../CSV_TMVA_${VertexCategory[l]}_defaultBDT.xml ${prefix}MVA_${VertexCategory[l]}.mva ../train_${VertexCategory[l]}_B_DUSG_save.root ../train_${VertexCategory[l]}_B_C_save.root &
 		cd ..
 		let jobsrunning=$jobsrunning+1
 		let l=$l+1
