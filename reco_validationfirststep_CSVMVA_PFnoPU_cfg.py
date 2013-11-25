@@ -30,7 +30,7 @@ process.BTauMVAJetTagComputerRecord = cms.ESSource("PoolDBESSource",
 		record = cms.string('BTauGenericMVAJetTagComputerRcd'),
                 tag = cms.string('MVAJetTags_CMSSW_5_3_4')
 	)),
-	connect = cms.string("sqlite_file:MVAJetTags_withPFnoPU_Adding2HighPtBins_nonFit-Reweighting.db"),
+	connect = cms.string("sqlite_file:MVAJetTags_withPFnoPU_Adding2HighPtBins_nonFit-Reweighting.db"), ######## REPLACE!!!
 	#connect = cms.string('frontier://FrontierDev/CMS_COND_BTAU'),
 	BlobStreamerName = cms.untracked.string('TBufferBlobStreamingService')
 )
