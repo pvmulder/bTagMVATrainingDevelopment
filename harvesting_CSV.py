@@ -1,4 +1,4 @@
-import FWCore.ParameterSet.Config as cms
+ileimport FWCore.ParameterSet.Config as cms
 
 process = cms.Process("harvesting")
 
@@ -27,7 +27,7 @@ process.GlobalTag.globaltag = autoCond['startup']
 process.source = cms.Source("PoolSource",
   #fileNames = filelist,
   fileNames = cms.untracked.vstring(
-	 'file:DQMfile_1_1_Mgj.root', 'file:DQMfile_2_1_4KG.root', 'file:DQMfile_3_1_43d.root', 'file:DQMfile_4_1_FmM.root', 'file:DQMfile_5_1_9vO.root'
+	 'file:DQMfile_1_1_Mgj.root', 'file:DQMfile_2_1_4KG.root', 'file:DQMfile_3_1_43d.root', 'file:DQMfile_4_1_FmM.root', 'file:DQMfile_5_1_9vO.root'####### REPLACE BY LIST OBTAINED RUNNING listFiles.sh
 #'file:/afs/cern.ch/work/p/pvmulder/public/BTagging/FINAL_NOSPIKES/CMSSW_5_3_4_patch1/src/CrabJobs/TEST/',
 #'file:/afs/cern.ch/work/s/sdevissc/SoftLeptonBTag/CMSSW_5_3_9/src/crab_0_130412_003957/res/DQMfile_204_1_NpH.root',
 #'file:/afs/cern.ch/work/s/sdevissc/SoftLeptonBTag/CMSSW_5_3_9/src/crab_0_130412_003957/res/DQMfile_220_1_tcg.root',
@@ -133,7 +133,7 @@ process.CustombTagValidation = process.bTagValidation.clone(
 
 process.dqmEnv.subSystemFolder = 'BTAG'
 process.dqmSaver.producer = 'DQM'
-process.dqmSaver.workflow = '/POG/BTAG/BJET'
+process.dqmSaver.workflow = '/POG/BTAG/BJET'  ### REPLACE IF YOU WANT ANOTHER OUTPUT FILE NAME
 process.dqmSaver.convention = 'Offline'
 process.dqmSaver.saveByRun = cms.untracked.int32(-1)
 process.dqmSaver.saveAtJobEnd =cms.untracked.bool(True)
